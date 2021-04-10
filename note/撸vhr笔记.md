@@ -60,6 +60,8 @@ spring.datasource.password=123
 
 <img src="./assets/image-20210410182457299.png" alt="image-20210410182457299" style="zoom:50%;" align="left"/>
 
+
+
 2. 建表并插入数据：
 
 ```sql
@@ -282,9 +284,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 <img src="./assets/image-20210410194826673.png" alt="image-20210410194826673" style="zoom:35%;" align="left"/>
 
+
+
 <img src="./assets/image-20210410195050848.png" alt="image-20210410195050848" style="zoom:35%;" align="left" />
 
+
+
 <img src="./assets/image-20210410195233933.png" alt="image-20210410195233933" style="zoom:50%;" align="left"/>
+
+
 
 ### 访问权限
 
@@ -294,17 +302,25 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 <img src="./assets/image-20210410182825193.png" alt="image-20210410182825193" style="zoom:50%;" align="left"/>
 
+
+
 2. hr与role的关联表：
 
 <img src="./assets/image-20210410182945751.png" alt="image-20210410182945751" style="zoom:50%;" align="left"/>
+
+
 
 3. menu表
 
 <img src="./assets/image-20210410200845554.png" alt="image-20210410200845554" style="zoom:50%;" align="left"/>
 
+
+
 4. menu与role的关联表
 
 <img src="./assets/image-20210410200945670.png" alt="image-20210410200945670" style="zoom:50%;" align="left"/>
+
+
 
 sql脚本
 
@@ -518,6 +534,8 @@ decide方法决定请求是否放行。参数attributes即为步骤5方法返回
 
 <img src="./assets/image-20210410203150782.png" alt="image-20210410203150782" style="zoom:50%;" align="left"/>
 
+
+
 ```java
 @Component
 public class UrlAccessDecisionManager implements AccessDecisionManager {
@@ -663,9 +681,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 <img src="./assets/image-20210410212703292.png" style="zoom:50%;" align="left"/>
 
+
+
 3. 访问/employee/advanced/hello，权限不足
 
 `http://localhost:8082/employee/advanced/hello`
 
 <img src="./assets/image-20210410212929756.png" alt="image-20210410212929756" style="zoom:50%;" align="left"/>
+
+
 
