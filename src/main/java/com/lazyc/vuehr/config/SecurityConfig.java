@@ -20,6 +20,7 @@ import org.springframework.security.web.access.intercept.FilterSecurityIntercept
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.security.web.authentication.logout.LogoutSuccessHandler;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -84,7 +85,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     public void onAuthenticationSuccess(HttpServletRequest req, HttpServletResponse resp, Authentication auth) throws IOException, ServletException {
                         resp.setContentType("application/json;charset=utf-8");
                         Hr hr = (Hr)auth.getPrincipal();
-                        RespBean respBean = RespBean.ok("登陆成功!", hr);
+                        RespBean respBean = RespBean.ok("登录成功!", hr);
                         writeRespBean(resp, respBean);
                     }
                 })
